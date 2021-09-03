@@ -6,5 +6,7 @@ navbar:
       href: index.html
     - text: "RMDtest"
       href: RMDtest.html
+    - text: "Chapter 1"
+      href: Ch1.html
 output_dir: docs
 

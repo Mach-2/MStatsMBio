@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Madison Chapel" />
 
+<meta name="date" content="2021-09-03" />
 
-<title>My Website</title>
+<title>Ch1</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -292,14 +294,41 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
+<h1 class="title toc-ignore">Ch1</h1>
+<h4 class="author">Madison Chapel</h4>
+<h4 class="date">2021-09-03</h4>
 
 </div>
 
 
-<p>Hello, Website!</p>
-<p>For more information about simple R Markdown websites, please read the documentation at <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html" class="uri">https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html</a>.</p>
-<p>Please also note that simple R Markdown sites are <em>not</em> based on <strong>blogdown</strong>. They are probably good for websites with only a few Rmd documents. For larger-scale and more sophisticated websites (such as blogs), you may want to use <strong>blogdown</strong> instead: <a href="https://github.com/rstudio/blogdown" class="uri">https://github.com/rstudio/blogdown</a>.</p>
+<div id="generative-models-for-discrete-data" class="section level1">
+<h1>1. Generative Models for Discrete Data</h1>
+<div id="example" class="section level3">
+<h3>1.2 example</h3>
+<p>Display how often 3 mutations would occur in the Poisson(5) model:</p>
+<pre class="r"><code>dpois(x = 3, lambda = 5)</code></pre>
+<pre><code>## [1] 0.1403739</code></pre>
+<p>Okay, I think I’ve got this RMarkdown business (partially) figured out!</p>
+<p>We can also vector our probabilities for all values 0 to 12:</p>
+<pre class="r"><code>dpois(x = 0:12, lambda = 5)</code></pre>
+<pre><code>##  [1] 0.006737947 0.033689735 0.084224337 0.140373896 0.175467370 0.175467370
+##  [7] 0.146222808 0.104444863 0.065278039 0.036265577 0.018132789 0.008242177
+## [13] 0.003434240</code></pre>
+<pre class="r"><code>barplot(dpois(0:12,5), names.arg = 0:12, col = &quot;purple&quot;)</code></pre>
+<p><img src="Ch1_files/figure-html/dpois4-1.png" width="672" /></p>
+</div>
+<div id="discrete-probability-models" class="section level3">
+<h3>1.3 Discrete probability models</h3>
+<p><strong>Q 1.1</strong> What if you want to create a factor that has some levels not yet in your data?</p>
+<p><strong>Answer</strong></p>
+<pre class="r"><code>genotype = c(&quot;AA&quot;,&quot;AO&quot;,&quot;BB&quot;,&quot;AO&quot;,&quot;OO&quot;)
+
+genotypeF = factor(c(genotype,&quot;Level&quot;))
+
+levels(genotypeF)</code></pre>
+<pre><code>## [1] &quot;AA&quot;    &quot;AO&quot;    &quot;BB&quot;    &quot;Level&quot; &quot;OO&quot;</code></pre>
+</div>
+</div>
 
 
 
