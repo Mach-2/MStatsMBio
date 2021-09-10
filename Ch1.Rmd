@@ -98,7 +98,11 @@ The actual most frequent value will be 4!
 **Q 1.4**
 What is the output of the formula for k = 3, p = 2/3, n = 4? 
 
+<<<<<<< HEAD
 ``` {r 1.4} 
+=======
+``` {r 1.4 echo = FALSE} 
+>>>>>>> 8f839ddae462a8b284ee72e1b8b66a29046600d5
 probabilities = dbinom(0:4, prob = 2/3, size = 4)
 round(probabilities, 4)
 
@@ -124,7 +128,11 @@ When *p* is small and trials *n* is large, binomial distribution can be approxim
 What is the probability mass distribution of observing 0:12 mutations in a genome of n = 10^4^ nucleotides, when the probability is p = 5 x 10^-4^ per nucleotide? 
 Is it similar when modeled by the binomial distribution and the Poisson distribution? 
 
+<<<<<<< HEAD
 ``` {r 1.5, echo = FALSE}
+=======
+``` {r 1.5 echo = FALSE}
+>>>>>>> 8f839ddae462a8b284ee72e1b8b66a29046600d5
 
 binom = dbinom(0:12, prob = 5*10^(-4), size = 10^4)
 poisson = dpois(0:12, (5*10^(-4))*(10^4))
